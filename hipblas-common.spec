@@ -2,7 +2,7 @@
 
 Name:		hipblas-common
 Version:	7.14.0
-Release:	1
+Release:	2
 Summary:	Common headers for hipBLAS libraries
 License:	MIT
 Group:		Development/C++
@@ -26,6 +26,10 @@ Requires:	%{name} = %{version}-%{release}
 Provides:	hipblas-common-devel = %{EVRD}
 # Upstream package version string is 1.4.0; satisfy hipBLAS RPM deps
 Provides:	hipblas-common-devel = 1.4.0
+# noarch installs cmake under /usr/lib (not %{_libdir}); auto-generators
+# may miss that path on 64-bit builders — explicit Provides for hipblas-devel
+Provides:	cmake(hipblas-common) = %{version}
+Provides:	cmake(hipblas-common) = 1.4.0
 
 %description devel
 Headers and CMake package for hipblas-common (INTERFACE library).
