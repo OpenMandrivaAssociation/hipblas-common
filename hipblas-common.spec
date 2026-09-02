@@ -1,13 +1,13 @@
-# Common headers for hipBLAS / hipBLASLt (TheRock 7.14). Header-only.
+# Common headers for hipBLAS / hipBLASLt (TheRock 10.0). Header-only.
 
 Name:		hipblas-common
-Version:	7.14.0
-Release:	2
+Version:	10.0.0
+Release:	1
 Summary:	Common headers for hipBLAS libraries
 License:	MIT
 Group:		Development/C++
 URL:		https://github.com/ROCm/rocm-libraries
-Source0:	https://github.com/ROCm/rocm-libraries/releases/download/therock-7.14/hipblas-common.tar.gz#/hipblas-common-%{version}.tar.gz
+Source0:	https://github.com/ROCm/rocm-libraries/releases/download/therock-10.0/hipblas-common.tar.gz#/hipblas-common-%{version}.tar.gz
 
 BuildRequires:	rocm-rpm-macros
 BuildRequires:	cmake
